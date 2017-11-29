@@ -1,0 +1,33 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "strict": 0,
+    "prefer-const": 0,
+    "import/no-unresolved":[2,{"ignore":["^script!"]}]
+  },
+  "plugins": ["import"],
+  "settings": {
+  },
+  "globals": {
+    "angular": true,
+    "Rx": true,
+    "require": true,
+    "describe": true,
+    "it": true,
+    "before": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "inject": true,
+    "AmCharts": true,
+    "$": true,
+    "jasmine": true,
+    "expect": true,
+    "spyOn": true,
+    "xit": true,
+    "xdescribe": true,
+    "window": true,
+    "document": true,
+    "console": 2,
+    "ENV": true
+  }
+}
