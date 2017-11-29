@@ -1,21 +1,21 @@
 
 <div class="container">
-    <div class="header">
+    <div class="todo__header">
         <h1>Quest</h1>
         <img src="war.svg" alt="">
     </div>
-    <form name='form' ng-submit="$ctrl.addTask()">
-        <input type="text" name='newTask' ng-model='$ctrl.newTask' required>     
+    <form class="todo__form" name='form' ng-submit="$ctrl.addTask()">
+        <input type="text" name='newTask' ng-model='$ctrl.newTask' required >     
         <button class="btn btn-outline-primary btn-lg" ng-disable='form.$invalid'>add</button>
     </form>
     <h2>Checklist</h2>
-    <ul class="list-group" ng-repeat="task in $ctrl.tasks">
-      <li class="list-group-item">   
+    <ul class="todo__list list-group" ng-repeat="task in $ctrl.tasks">
+      <li class="todo__list-item list-group-item">   
         {{$index + 1 + ". "}}{{task.title | uppercase}}
         <button class="btn btn-outline-success btn-lg" ng-click='$ctrl.remove($index)'>done</button>
       </li>
     </ul>
-    <div ng-hide="$ctrl.tasks.length">
+    <div class="todo__alert" ng-hide="$ctrl.tasks.length">
       <p>Nie masz żadnych zadań</p>
     </div>
 </div>
