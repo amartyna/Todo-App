@@ -9,16 +9,14 @@ module.exports = (config) => {
     files: [
       'node_modules/babel-polyfill/dist/polyfill.js',
       'node_modules/angular/angular.js',
-      'node_modules/rx/dist/rx.all.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'node_modules/decimal.js/decimal.js',
-      'app/**/*.test.js',
+      'components/**/*.test.js',
     ],
 
     exclude: [],
 
     preprocessors: {
-      'app/**/*.test.js': ['webpack', 'sourcemap'],
+      'components/**/*.test.js': ['webpack', 'sourcemap'],
     },
 
     webpack: testWebpackConfig,

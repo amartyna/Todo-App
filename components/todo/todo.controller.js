@@ -3,11 +3,11 @@ import { log } from "util";
 class Todo {
   constructor() {
     this.tasks = [];
-    this.newTask = [];
+    this.newTask = '';
   }
   addTask() {
     this.tasks.push({'title': this.newTask});
-    this.newTask = "";
+    this.newTask = '';
   }
   remove(index) {
     this.tasks.splice(index, 1);

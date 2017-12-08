@@ -5,13 +5,13 @@
         <img src="war.svg" alt="">
     </div>
     <form class="todo__form" name='form' ng-submit="$ctrl.addTask()">
-        <input type="text" name='newTask' ng-model='$ctrl.newTask' required >     
+        <input type="text" name='' ng-model='$ctrl.newTask' required >     
         <button class="btn btn-outline-primary btn-lg" ng-disable='form.$invalid'>add</button>
     </form>
     <h2>Checklist</h2>
     <ul class="todo__list list-group" ng-repeat="task in $ctrl.tasks">
       <li class="todo__list-item list-group-item">   
-        {{$index + 1 + ". "}}{{task.title | uppercase}}
+        {{$index + 1 + ". "}}{{task | uppercase}}
         <button class="btn btn-outline-success btn-lg" ng-click='$ctrl.remove($index)'>done</button>
       </li>
     </ul>
